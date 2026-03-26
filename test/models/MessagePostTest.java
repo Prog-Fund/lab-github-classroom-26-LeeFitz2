@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MessagePostTest {
     MessagePost messagePost1;
     MessagePost messagePost2;
+    MessagePost messagePost3;
 
 
     @BeforeEach
@@ -33,5 +34,7 @@ class MessagePostTest {
         assertEquals("Bye Bye", messagePost1.getMessage());
         assertEquals("Wait.. Wait..", messagePost2.getMessage());
         //TODO  test when try to set a message that's too long
+        messagePost3.setMessage("This message will be too long and won't work. I'm not sure how long this is but it's probably long enough now");
+        assertEquals("", messagePost3.getMessage());
     }
 }
